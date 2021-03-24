@@ -1,0 +1,18 @@
+[package]
+name = "fill_me_in"
+version = "0.1.0"
+authors = ["authors go here"]
+description = "decription goes here"
+edition = "2018"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+clippy_utils = { git = "https://github.com/rust-lang/rust-clippy", rev = "1a206fc4abae0b57a3f393481367cf3efca23586"}
+if_chain = "1.0.1"
+dylint_linting = "1.0.0-pre.0"
+
+[dev-dependencies]
+dylint_testing = "1.0.0-pre.0"
