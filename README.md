@@ -13,7 +13,7 @@ Choose a [Clippy lint](https://rust-lang.github.io/rust-clippy/master/) and run 
 cargo build
 ```
 
-If both commands fail: sorry. Perhaps try another Clippy lint.
+If the first command fails: sorry. Perhaps try another Clippy lint.
 
 If the first command succeeds, but the second fails: you are probably halfway to having a functional Dylint library.
 
