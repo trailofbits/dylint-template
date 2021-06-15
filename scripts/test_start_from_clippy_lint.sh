@@ -30,7 +30,7 @@ while read CLIPPY_LINT_NAME; do
             (echo -e "${RED}start_from_clippy_lint.sh failed${RESET}" && false)) &&
         (cargo build 2>/dev/null ||
             (echo -e "${YELLOW}cargo build failed${RESET}" && false)) &&
-        (echo -e "${GREEN}OK${RESET}")
+        (echo -e "${GREEN}ok${RESET}")
     git checkout . --quiet
     git clean -dfx src ui --quiet
 done
