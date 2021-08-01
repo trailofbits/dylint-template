@@ -6,9 +6,6 @@ description = "decription goes here"
 edition = "2018"
 publish = false
 
-[package.metadata.rust-analyzer]
-rustc_private=true
-
 [lib]
 crate-type = ["cdylib"]
 
@@ -19,3 +16,6 @@ if_chain = "1.0.1"
 
 [dev-dependencies]
 dylint_testing = "1.0.1"
+
+[package.metadata.rust-analyzer]
+rustc_private = true
