@@ -26,3 +26,10 @@ jobs:
 
       - name: Test
         run: cargo test
+
+      - name: Doc Test
+        # Doc-Tests cannot be run on "cdylib" crates.
+        # Due to this the crate will be changed to a regular "lib" and then run the Doc-Tests.
+        run: |
+          sed -i 's/"cdylib"/"lib"/g' Cargo.toml
+          cargo test --doc
