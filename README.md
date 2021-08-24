@@ -25,5 +25,5 @@ If the first command succeeds, but the second fails: you are probably halfway to
 If both commands succeed: hooray! You might then try the following:
 
 ```sh
-cargo dylint NEW_LINT_NAME -- --manifest-path=PATH_TO_OTHER_PACKAGES_MANIFEST
+DYLINT_LIBRARY_PATH=$PWD/target/debug cargo dylint NEW_LINT_NAME -- --manifest-path=PATH_TO_OTHER_PACKAGES_MANIFEST
 ```
