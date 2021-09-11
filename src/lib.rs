@@ -27,6 +27,7 @@ extern crate rustc_typeck;
 mod fill_me_in;
 
 #[no_mangle]
+#[doc(hidden)]
 pub fn register_lints(_sess: &rustc_session::Session, lint_store: &mut rustc_lint::LintStore) {
     lint_store.register_lints(&[fill_me_in::FILL_ME_IN]);
     lint_store.register_late_pass(|| Box::new(fill_me_in::FillMeIn));
