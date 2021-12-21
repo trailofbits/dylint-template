@@ -14,7 +14,9 @@ extern crate rustc_infer;
 extern crate rustc_lexer;
 extern crate rustc_lint;
 extern crate rustc_middle;
-extern crate rustc_mir_dataflow;
+// smoelius: The renaming of `rustc_mir` has caused problems for the Dylint tests. The crate is used
+// by only one Clippy lint, `redundant_clone`. So I am disabling it for now.
+// extern crate rustc_mir_dataflow;
 extern crate rustc_parse;
 extern crate rustc_parse_format;
 extern crate rustc_session;
