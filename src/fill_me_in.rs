@@ -24,7 +24,7 @@ declare_lint! {
 
 declare_lint_pass!(FillMeIn => [FILL_ME_IN]);
 
-impl<'hir> LateLintPass<'hir> for FillMeIn {
+impl<'tcx> LateLintPass<'tcx> for FillMeIn {
     // A list of things you might check can be found here:
     // https://doc.rust-lang.org/stable/nightly-rustc/rustc_lint/trait.LateLintPass.html
 }
