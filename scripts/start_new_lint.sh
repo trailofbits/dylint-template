@@ -24,19 +24,11 @@ sed -i "s/\<fill_me_in\>/$NEW_LOWER/g" "$DST/Cargo.toml"
 (
     echo "# $NEW_LOWER"
     echo
-    cat "$DST/src/fill_me_in.rs" |
+    cat "$DST/src/lib.rs" |
     sed -n 's,^[[:space:]]*///[[:space:]]*\(.*\)$,\1,;T;p'
 ) > "$DST/README.md"
 
 # src/lib.rs
-
-sed -i "
-    s/\<fill_me_in\>/$NEW_LOWER/g;
-    s/\<FILL_ME_IN\>/$NEW_UPPER/g;
-    s/\<FillMeIn\>/$NEW_CAMEL/g
-" "$DST/src/lib.rs"
-
-# src/fill_me_in.rs
 
 sed -i "
     s/\<crate::consts\>/clippy_utils::consts/g
@@ -47,9 +39,7 @@ sed -i "
     s/\<$CLIPPY_LOWER\>/$NEW_LOWER/g
     s/\<$CLIPPY_UPPER\>/$NEW_UPPER/g
     s/\<$CLIPPY_CAMEL\>/$NEW_CAMEL/g
-" "$DST/src/fill_me_in.rs"
-
-mv "$DST/src/fill_me_in.rs" "$DST/src/$NEW_LOWER.rs"
+" "$DST/src/lib.rs"
 
 # ui/main.rs
 
