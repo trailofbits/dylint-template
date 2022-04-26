@@ -2,12 +2,13 @@
 
 [Dylint](https://github.com/trailofbits/dylint) is a tool for running Rust lints from dynamic libraries. This repository is a "blank slate" Dylint library.
 
-After forking this repository, run the following command, where `NEW_LINT_NAME` is your new lint's name:
-```sh
-./start_new_lint.sh NEW_LINT_NAME
-```
+The recommended way to create a new Dylint library is with `cargo dylint --new PATH`.
 
-Alternatively, you can try the experimental `start_from_clippy_lint.sh` script described below.
+However, forking this respository and running `./start_new_lint.sh NEW_LINT_NAME` should also work.
+
+The documentation for `start_from_clippy_lint.sh` is retained below. However, the script is currently non-functional and requires updating.
+
+---
 
 **Experimental**
 
