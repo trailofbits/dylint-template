@@ -1,5 +1,13 @@
 # Template Dylint library
 
+This repository is archived. Please use the following command to create new [Dylint](https://github.com/trailofbits/dylint) libraries:
+
+```
+cargo dylint --new <path>
+```
+
+---
+
 [Dylint](https://github.com/trailofbits/dylint) is a tool for running Rust lints from dynamic libraries. This repository is a "blank slate" Dylint library.
 
 The recommended way to create a new Dylint library is with `cargo dylint --new PATH`.
